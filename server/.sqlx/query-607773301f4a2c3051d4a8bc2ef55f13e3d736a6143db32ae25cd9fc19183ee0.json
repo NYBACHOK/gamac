@@ -1,0 +1,32 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select s.uuid, s.os_name, s.web_site from system s;",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "uuid",
+        "type_info": "Uuid"
+      },
+      {
+        "ordinal": 1,
+        "name": "os_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "web_site",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "607773301f4a2c3051d4a8bc2ef55f13e3d736a6143db32ae25cd9fc19183ee0"
+}

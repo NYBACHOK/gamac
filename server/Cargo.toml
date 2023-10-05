@@ -1,0 +1,30 @@
+[package]
+name = "capstone"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.4.0"
+tokio = { version = "1.32.0", features = [ "full" ]}
+rust-argon2 = "2.0.0"
+uuid = { version = "1.4.1",  features = ["serde"]}
+time = { version = "0.3.28", features = ["serde"]}
+sqlx = { version = "*", features = [ "runtime-tokio-native-tls", "postgres", "uuid" , "time", "migrate"] }
+serde = { version = "1.0.188", features = []}
+serde_json = "1.0.105"
+once_cell = "1.18.0"
+tracing = { version = "0.1.37", features = ["log"]}
+tracing-subscriber = { version = "0.3.17", features = ["registry", "env-filter"] }
+tracing-bunyan-formatter = { version = "0.3.9"}
+tracing-log = "0.1.3"
+thiserror = "1.0.48"
+hex = "0.4.3"
+derive_builder = "0.12.0"
+config = "0.13.3"
+reqwest = "0.11.20"
+jsonwebtoken = "8.2.0"
+#utoipa = { version = "3.5.0", features = [ "actix_extras" ]}
+#utoipa-swagger-ui = { version = "3.1.5", features = [ "actix-web"]}
