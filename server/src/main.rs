@@ -23,7 +23,7 @@ async fn main() -> Result<(), ApiErrors> {
     let pool = PgPool::connect(&config.db).await.map_err(ApiErrors::Sqlx)?;
 
     let env_filter = EnvFilter::try_from_default_env().unwrap_or(EnvFilter::new("info"));
-    let formatting_layer = BunyanFormattingLayer::new("zero2prod".into(), std::io::stdout);
+    let formatting_layer = BunyanFormattingLayer::new("gamac".into(), std::io::stdout);
     let subscriber = Registry::default()
         .with(env_filter)
         .with(JsonStorageLayer)
