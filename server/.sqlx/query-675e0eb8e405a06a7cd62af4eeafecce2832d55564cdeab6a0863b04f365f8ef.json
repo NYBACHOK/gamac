@@ -1,0 +1,35 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select pk.package_name, pk.command, pk.update_instruction from\n( select * from packages pk join package_manger pm on pm.uuid = pk.package_manger where pm.system =$1) pk\nwhere pk.software = (select s.uuid from software s where s.uuid = $2);",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "package_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 1,
+        "name": "command",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "update_instruction",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Uuid",
+        "Uuid"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "675e0eb8e405a06a7cd62af4eeafecce2832d55564cdeab6a0863b04f365f8ef"
+}

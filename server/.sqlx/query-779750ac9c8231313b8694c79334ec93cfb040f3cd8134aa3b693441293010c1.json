@@ -1,0 +1,38 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select s.long_name, s.short_name, s.developer, s.web_site from software s",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "long_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 1,
+        "name": "short_name",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 2,
+        "name": "developer",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 3,
+        "name": "web_site",
+        "type_info": "Text"
+      }
+    ],
+    "parameters": {
+      "Left": []
+    },
+    "nullable": [
+      false,
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "779750ac9c8231313b8694c79334ec93cfb040f3cd8134aa3b693441293010c1"
+}
